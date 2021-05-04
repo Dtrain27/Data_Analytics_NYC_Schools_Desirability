@@ -236,7 +236,7 @@ def classify_using_KNN(data):
     accuracys = []
     k_vals = []
     best_accuracy = 0
-    for neighbors in range(1, 50):
+    for neighbors in range(2, 50):
         scaler = StandardScaler()
         scaler.fit(train_x_data)
 
@@ -258,7 +258,7 @@ def classify_using_KNN(data):
 
     # Plot our various k values and their error rates and accuracies
     plt.plot(
-        range(1, 50), 
+        range(2, 50), 
         errors, 
         color='black', 
         linestyle='dashed', 
@@ -274,7 +274,7 @@ def classify_using_KNN(data):
     plt.clf()
 
     plt.plot(
-        range(1, 50), 
+        range(2, 50), 
         accuracys, 
         color='black', 
         linestyle='dashed', 
